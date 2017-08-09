@@ -1,0 +1,307 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file led4_impl1_map.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-85F
+Package:     CABGA756
+Performance: 8
+Loading device for application trce from file 'sa5p85m.nph' in environment: C:/lscc/diamond/3.5/ispfpga.
+Package Status:                     Preliminary    Version 1.38.
+Performance Hardware Data Status:   Preliminary    Version 42.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond Version 3.5.0.102</big></U></B>
+Wed Aug 09 14:45:38 2017
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o LED4_impl1.tw1 -gui LED4_impl1_map.ncd LED4_impl1.prf 
+Design file:     led4_impl1_map.ncd
+Preference file: led4_impl1.prf
+Device,speed:    LFE5UM-85F,8
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY NET "ara_baglanti_c" 2.400000 MHz (0 errors)</A></LI>            1359 items scored, 0 timing errors detected.
+Report:  257.400MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+            1359 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 412.782ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i5  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i20  (to ara_baglanti_c +)
+
+   Delay:               4.094ns  (55.0% logic, 45.0% route), 15 logic levels.
+
+ Constraint Details:
+
+      4.094ns physical path delay SLICE_0 to SLICE_5 meets
+    416.667ns delay constraint less
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 412.782ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394    SLICE_0.CLK to     SLICE_0.Q0 SLICE_0 (from ara_baglanti_c)
+ROUTE         7   e 0.419     SLICE_0.Q0 to    SLICE_38.A1 compteur.count_5
+CTOF_DEL    ---     0.179    SLICE_38.A1 to    SLICE_38.F1 SLICE_38
+ROUTE         1   e 0.419    SLICE_38.F1 to    SLICE_20.C0 n1803
+CTOF_DEL    ---     0.179    SLICE_20.C0 to    SLICE_20.F0 SLICE_20
+ROUTE         2   e 0.419    SLICE_20.F0 to    SLICE_23.D1 n1715
+CTOF_DEL    ---     0.179    SLICE_23.D1 to    SLICE_23.F1 SLICE_23
+ROUTE         5   e 0.156    SLICE_23.F1 to    SLICE_23.B0 n1725
+CTOF_DEL    ---     0.179    SLICE_23.B0 to    SLICE_23.F0 SLICE_23
+ROUTE         1   e 0.419    SLICE_23.F0 to     SLICE_8.A0 n1949
+C0TOFCO_DE  ---     0.354     SLICE_8.A0 to    SLICE_8.FCO SLICE_8
+ROUTE         1   e 0.001    SLICE_8.FCO to   SLICE_10.FCI n1525
+FCITOFCO_D  ---     0.055   SLICE_10.FCI to   SLICE_10.FCO SLICE_10
+ROUTE         1   e 0.001   SLICE_10.FCO to    SLICE_0.FCI n1526
+FCITOFCO_D  ---     0.055    SLICE_0.FCI to    SLICE_0.FCO SLICE_0
+ROUTE         1   e 0.001    SLICE_0.FCO to    SLICE_1.FCI n1527
+FCITOFCO_D  ---     0.055    SLICE_1.FCI to    SLICE_1.FCO SLICE_1
+ROUTE         1   e 0.001    SLICE_1.FCO to    SLICE_3.FCI n1528
+FCITOFCO_D  ---     0.055    SLICE_3.FCI to    SLICE_3.FCO SLICE_3
+ROUTE         1   e 0.001    SLICE_3.FCO to    SLICE_4.FCI n1529
+FCITOFCO_D  ---     0.055    SLICE_4.FCI to    SLICE_4.FCO SLICE_4
+ROUTE         1   e 0.001    SLICE_4.FCO to    SLICE_2.FCI n1530
+FCITOFCO_D  ---     0.055    SLICE_2.FCI to    SLICE_2.FCO SLICE_2
+ROUTE         1   e 0.001    SLICE_2.FCO to    SLICE_7.FCI n1531
+FCITOFCO_D  ---     0.055    SLICE_7.FCI to    SLICE_7.FCO SLICE_7
+ROUTE         1   e 0.001    SLICE_7.FCO to    SLICE_6.FCI n1532
+FCITOFCO_D  ---     0.055    SLICE_6.FCI to    SLICE_6.FCO SLICE_6
+ROUTE         1   e 0.001    SLICE_6.FCO to    SLICE_5.FCI n1533
+FCITOF1_DE  ---     0.348    SLICE_5.FCI to     SLICE_5.F1 SLICE_5
+ROUTE         1   e 0.001     SLICE_5.F1 to    SLICE_5.DI1 n90 (to ara_baglanti_c)
+                  --------
+                    4.094   (55.0% logic, 45.0% route), 15 logic levels.
+
+Report:  257.400MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ara_baglanti_c" 2.400000 |             |             |
+MHz ;                                   |    2.400 MHz|  257.400 MHz|  15  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ara_baglanti_c   Source: OSCInst0.OSC   Loads: 20
+   Covered under: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1359 paths, 1 nets, and 328 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond Version 3.5.0.102</big></U></B>
+Wed Aug 09 14:45:38 2017
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o LED4_impl1.tw1 -gui LED4_impl1_map.ncd LED4_impl1.prf 
+Design file:     led4_impl1_map.ncd
+Preference file: led4_impl1.prf
+Device,speed:    LFE5UM-85F,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "ara_baglanti_c" 2.400000 MHz (0 errors)</A></LI>            1359 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+            1359 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.177ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i6  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i6  (to ara_baglanti_c +)
+
+   Delay:               0.295ns  (80.0% logic, 20.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.295ns physical path delay SLICE_0 to SLICE_0 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling 0.118ns) by 0.177ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from ara_baglanti_c)
+ROUTE         6   e 0.058     SLICE_0.Q1 to     SLICE_0.A1 compteur.count_6
+CTOF_DEL    ---     0.075     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
+ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 n104 (to ara_baglanti_c)
+                  --------
+                    0.295   (80.0% logic, 20.0% route), 2 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ara_baglanti_c" 2.400000 |             |             |
+MHz ;                                   |     0.000 ns|     0.177 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ara_baglanti_c   Source: OSCInst0.OSC   Loads: 20
+   Covered under: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1359 paths, 1 nets, and 328 connections (100.00% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

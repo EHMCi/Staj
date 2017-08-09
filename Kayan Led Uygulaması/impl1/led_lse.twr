@@ -1,0 +1,253 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Aug 09 14:45:31 2017
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     led
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets ara_baglanti_c]
+            1509 items scored, 898 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.629ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             compteur.count_141__i6  (from ara_baglanti_c +)
+   Destination:    FD1S3IX    D              compteur.count_141__i19  (to ara_baglanti_c +)
+
+   Delay:                   8.749ns  (15.0% logic, 85.0% route), 15 logic levels.
+
+ Constraint Details:
+
+      8.749ns data_path compteur.count_141__i6 to compteur.count_141__i19 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 3.629ns
+
+ Path Details: compteur.count_141__i6 to compteur.count_141__i19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              compteur.count_141__i6 (from ara_baglanti_c)
+Route         6   e 1.478                                  compteur.count[6]
+LUT4        ---     0.105              B to Z              i1_2_lut_adj_2
+Route         3   e 1.239                                  n1801
+LUT4        ---     0.105              D to Z              i1051_4_lut
+Route         2   e 1.158                                  n1715
+LUT4        ---     0.105              D to Z              i1061_4_lut
+Route         5   e 1.341                                  n1725
+LUT4        ---     0.105              B to Z              i841_2_lut_rep_4
+Route         1   e 1.020                                  n1949
+A1_TO_FCO   ---     0.212           A[2] to COUT           compteur.count_141_add_4_3
+Route         1   e 0.020                                  n1525
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_5
+Route         1   e 0.020                                  n1526
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_7
+Route         1   e 0.020                                  n1527
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_9
+Route         1   e 0.020                                  n1528
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_11
+Route         1   e 0.020                                  n1529
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_13
+Route         1   e 0.020                                  n1530
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_15
+Route         1   e 0.020                                  n1531
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_17
+Route         1   e 0.020                                  n1532
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_19
+Route         1   e 0.020                                  n1533
+FCI_TO_F    ---     0.187            CIN to S[2]           compteur.count_141_add_4_21
+Route         1   e 1.020                                  n91
+                  --------
+                    8.749  (15.0% logic, 85.0% route), 15 logic levels.
+
+
+Error:  The following path violates requirements by 3.629ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             compteur.count_141__i6  (from ara_baglanti_c +)
+   Destination:    FD1S3IX    D              compteur.count_141__i20  (to ara_baglanti_c +)
+
+   Delay:                   8.749ns  (15.0% logic, 85.0% route), 15 logic levels.
+
+ Constraint Details:
+
+      8.749ns data_path compteur.count_141__i6 to compteur.count_141__i20 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 3.629ns
+
+ Path Details: compteur.count_141__i6 to compteur.count_141__i20
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              compteur.count_141__i6 (from ara_baglanti_c)
+Route         6   e 1.478                                  compteur.count[6]
+LUT4        ---     0.105              B to Z              i1_2_lut_adj_2
+Route         3   e 1.239                                  n1801
+LUT4        ---     0.105              D to Z              i1051_4_lut
+Route         2   e 1.158                                  n1715
+LUT4        ---     0.105              D to Z              i1061_4_lut
+Route         5   e 1.341                                  n1725
+LUT4        ---     0.105              B to Z              i841_2_lut_rep_4
+Route         1   e 1.020                                  n1949
+A1_TO_FCO   ---     0.212           A[2] to COUT           compteur.count_141_add_4_3
+Route         1   e 0.020                                  n1525
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_5
+Route         1   e 0.020                                  n1526
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_7
+Route         1   e 0.020                                  n1527
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_9
+Route         1   e 0.020                                  n1528
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_11
+Route         1   e 0.020                                  n1529
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_13
+Route         1   e 0.020                                  n1530
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_15
+Route         1   e 0.020                                  n1531
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_17
+Route         1   e 0.020                                  n1532
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_19
+Route         1   e 0.020                                  n1533
+FCI_TO_F    ---     0.187            CIN to S[2]           compteur.count_141_add_4_21
+Route         1   e 1.020                                  n90
+                  --------
+                    8.749  (15.0% logic, 85.0% route), 15 logic levels.
+
+
+Error:  The following path violates requirements by 3.592ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             compteur.count_141__i8  (from ara_baglanti_c +)
+   Destination:    FD1S3IX    D              compteur.count_141__i19  (to ara_baglanti_c +)
+
+   Delay:                   8.712ns  (15.1% logic, 84.9% route), 15 logic levels.
+
+ Constraint Details:
+
+      8.712ns data_path compteur.count_141__i8 to compteur.count_141__i19 violates
+      5.000ns delay constraint less
+     -0.120ns L_S requirement (totaling 5.120ns) by 3.592ns
+
+ Path Details: compteur.count_141__i8 to compteur.count_141__i19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.230             CK to Q              compteur.count_141__i8 (from ara_baglanti_c)
+Route         5   e 1.441                                  compteur.count[8]
+LUT4        ---     0.105              A to Z              i1_2_lut_adj_2
+Route         3   e 1.239                                  n1801
+LUT4        ---     0.105              D to Z              i1051_4_lut
+Route         2   e 1.158                                  n1715
+LUT4        ---     0.105              D to Z              i1061_4_lut
+Route         5   e 1.341                                  n1725
+LUT4        ---     0.105              B to Z              i841_2_lut_rep_4
+Route         1   e 1.020                                  n1949
+A1_TO_FCO   ---     0.212           A[2] to COUT           compteur.count_141_add_4_3
+Route         1   e 0.020                                  n1525
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_5
+Route         1   e 0.020                                  n1526
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_7
+Route         1   e 0.020                                  n1527
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_9
+Route         1   e 0.020                                  n1528
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_11
+Route         1   e 0.020                                  n1529
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_13
+Route         1   e 0.020                                  n1530
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_15
+Route         1   e 0.020                                  n1531
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_17
+Route         1   e 0.020                                  n1532
+FCI_TO_FCO  ---     0.033            CIN to COUT           compteur.count_141_add_4_19
+Route         1   e 0.020                                  n1533
+FCI_TO_F    ---     0.187            CIN to S[2]           compteur.count_141_add_4_21
+Route         1   e 1.020                                  n91
+                  --------
+                    8.712  (15.1% logic, 84.9% route), 15 logic levels.
+
+Warning: 8.629 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets ara_baglanti_c]          |     5.000 ns|     8.629 ns|    15 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n1725                                   |       5|     550|     61.25%
+                                        |        |        |
+n1525                                   |       1|     454|     50.56%
+                                        |        |        |
+n1526                                   |       1|     404|     44.99%
+                                        |        |        |
+n1715                                   |       2|     360|     40.09%
+                                        |        |        |
+n1527                                   |       1|     354|     39.42%
+                                        |        |        |
+n1528                                   |       1|     304|     33.85%
+                                        |        |        |
+n1949                                   |       1|     260|     28.95%
+                                        |        |        |
+n1529                                   |       1|     254|     28.29%
+                                        |        |        |
+n1524                                   |       1|     244|     27.17%
+                                        |        |        |
+n1530                                   |       1|     204|     22.72%
+                                        |        |        |
+led7_N_85                               |      22|     198|     22.05%
+                                        |        |        |
+n1024                                   |       1|     198|     22.05%
+                                        |        |        |
+n1531                                   |       1|     154|     17.15%
+                                        |        |        |
+n1954                                   |       4|     136|     15.14%
+                                        |        |        |
+n1962                                   |       4|     136|     15.14%
+                                        |        |        |
+n1803                                   |       1|     135|     15.03%
+                                        |        |        |
+n1776                                   |       1|     110|     12.25%
+                                        |        |        |
+n1532                                   |       1|     104|     11.58%
+                                        |        |        |
+n1801                                   |       3|      98|     10.91%
+                                        |        |        |
+n1805                                   |       1|      90|     10.02%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 898  Score: 1506905
+
+Constraints cover  1509 paths, 121 nets, and 339 connections (97.4% coverage)
+
+
+Peak memory: 97161216 bytes, TRCE: 1028096 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

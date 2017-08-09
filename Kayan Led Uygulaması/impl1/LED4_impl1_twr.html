@@ -1,0 +1,1335 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file led4_impl1.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-85F
+Package:     CABGA756
+Performance: 8
+Loading device for application trce from file 'sa5p85m.nph' in environment: C:/lscc/diamond/3.5/ispfpga.
+Package Status:                     Preliminary    Version 1.38.
+Performance Hardware Data Status:   Preliminary    Version 42.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond Version 3.5.0.102</big></U></B>
+Wed Aug 09 14:46:04 2017
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 8 -sphld m -o LED4_impl1.twr -gui LED4_impl1.ncd LED4_impl1.prf 
+Design file:     led4_impl1.ncd
+Preference file: led4_impl1.prf
+Device,speed:    LFE5UM-85F,8
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "ara_baglanti_c" 2.400000 MHz (0 errors)</A></LI>            1359 items scored, 0 timing errors detected.
+Report:  185.288MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+            1359 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 411.270ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i20  (to ara_baglanti_c +)
+
+   Delay:               5.606ns  (40.2% logic, 59.8% route), 15 logic levels.
+
+ Constraint Details:
+
+      5.606ns physical path delay SLICE_1 to SLICE_5 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.270ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOFCO_D  ---     0.055   R87C120A.FCI to   R87C120A.FCO SLICE_7
+ROUTE         1     0.000   R87C120A.FCO to   R87C120B.FCI n1532
+FCITOFCO_D  ---     0.055   R87C120B.FCI to   R87C120B.FCO SLICE_6
+ROUTE         1     0.000   R87C120B.FCO to   R87C120C.FCI n1533
+FCITOF1_DE  ---     0.348   R87C120C.FCI to    R87C120C.F1 SLICE_5
+ROUTE         1     0.000    R87C120C.F1 to   R87C120C.DI1 n90 (to ara_baglanti_c)
+                  --------
+                    5.606   (40.2% logic, 59.8% route), 15 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120C.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.291ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i19  (to ara_baglanti_c +)
+
+   Delay:               5.585ns  (39.9% logic, 60.1% route), 15 logic levels.
+
+ Constraint Details:
+
+      5.585ns physical path delay SLICE_1 to SLICE_5 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.291ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOFCO_D  ---     0.055   R87C120A.FCI to   R87C120A.FCO SLICE_7
+ROUTE         1     0.000   R87C120A.FCO to   R87C120B.FCI n1532
+FCITOFCO_D  ---     0.055   R87C120B.FCI to   R87C120B.FCO SLICE_6
+ROUTE         1     0.000   R87C120B.FCO to   R87C120C.FCI n1533
+FCITOF0_DE  ---     0.327   R87C120C.FCI to    R87C120C.F0 SLICE_5
+ROUTE         1     0.000    R87C120C.F0 to   R87C120C.DI0 n91 (to ara_baglanti_c)
+                  --------
+                    5.585   (39.9% logic, 60.1% route), 15 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120C.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.325ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i18  (to ara_baglanti_c +)
+
+   Delay:               5.551ns  (39.6% logic, 60.4% route), 14 logic levels.
+
+ Constraint Details:
+
+      5.551ns physical path delay SLICE_1 to SLICE_6 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.325ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOFCO_D  ---     0.055   R87C120A.FCI to   R87C120A.FCO SLICE_7
+ROUTE         1     0.000   R87C120A.FCO to   R87C120B.FCI n1532
+FCITOF1_DE  ---     0.348   R87C120B.FCI to    R87C120B.F1 SLICE_6
+ROUTE         1     0.000    R87C120B.F1 to   R87C120B.DI1 n92 (to ara_baglanti_c)
+                  --------
+                    5.551   (39.6% logic, 60.4% route), 14 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120B.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.346ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i17  (to ara_baglanti_c +)
+
+   Delay:               5.530ns  (39.3% logic, 60.7% route), 14 logic levels.
+
+ Constraint Details:
+
+      5.530ns physical path delay SLICE_1 to SLICE_6 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.346ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOFCO_D  ---     0.055   R87C120A.FCI to   R87C120A.FCO SLICE_7
+ROUTE         1     0.000   R87C120A.FCO to   R87C120B.FCI n1532
+FCITOF0_DE  ---     0.327   R87C120B.FCI to    R87C120B.F0 SLICE_6
+ROUTE         1     0.000    R87C120B.F0 to   R87C120B.DI0 n93 (to ara_baglanti_c)
+                  --------
+                    5.530   (39.3% logic, 60.7% route), 14 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120B.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.380ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i16  (to ara_baglanti_c +)
+
+   Delay:               5.496ns  (39.0% logic, 61.0% route), 13 logic levels.
+
+ Constraint Details:
+
+      5.496ns physical path delay SLICE_1 to SLICE_7 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.380ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOF1_DE  ---     0.348   R87C120A.FCI to    R87C120A.F1 SLICE_7
+ROUTE         1     0.000    R87C120A.F1 to   R87C120A.DI1 n94 (to ara_baglanti_c)
+                  --------
+                    5.496   (39.0% logic, 61.0% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.401ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i15  (to ara_baglanti_c +)
+
+   Delay:               5.475ns  (38.7% logic, 61.3% route), 13 logic levels.
+
+ Constraint Details:
+
+      5.475ns physical path delay SLICE_1 to SLICE_7 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.401ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOFCO_D  ---     0.055   R87C119D.FCI to   R87C119D.FCO SLICE_2
+ROUTE         1     0.000   R87C119D.FCO to   R87C120A.FCI n1531
+FCITOF0_DE  ---     0.327   R87C120A.FCI to    R87C120A.F0 SLICE_7
+ROUTE         1     0.000    R87C120A.F0 to   R87C120A.DI0 n95 (to ara_baglanti_c)
+                  --------
+                    5.475   (38.7% logic, 61.3% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C120A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.435ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i14  (to ara_baglanti_c +)
+
+   Delay:               5.441ns  (38.4% logic, 61.6% route), 12 logic levels.
+
+ Constraint Details:
+
+      5.441ns physical path delay SLICE_1 to SLICE_2 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.435ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOF1_DE  ---     0.348   R87C119D.FCI to    R87C119D.F1 SLICE_2
+ROUTE         1     0.000    R87C119D.F1 to   R87C119D.DI1 n96 (to ara_baglanti_c)
+                  --------
+                    5.441   (38.4% logic, 61.6% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119D.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.454ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i6  (from ara_baglanti_c +)
+   Destination:    FF         Data in        led3_91  (to ara_baglanti_c +)
+
+   Delay:               4.927ns  (26.1% logic, 73.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      4.927ns physical path delay SLICE_0 to SLICE_13 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+      0.286ns LSR_SET requirement (totaling 416.381ns) by 411.454ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.392   R87C118D.CLK to    R87C118D.Q1 SLICE_0 (from ara_baglanti_c)
+ROUTE         6     0.783    R87C118D.Q1 to    R89C119D.B0 compteur.count_6
+CTOF_DEL    ---     0.179    R89C119D.B0 to    R89C119D.F0 SLICE_25
+ROUTE         3     0.296    R89C119D.F0 to    R89C119C.C0 n1801
+CTOF_DEL    ---     0.179    R89C119C.C0 to    R89C119C.F0 SLICE_22
+ROUTE         1     0.772    R89C119C.F0 to    R89C119C.A1 n1745
+CTOF_DEL    ---     0.179    R89C119C.A1 to    R89C119C.F1 SLICE_22
+ROUTE         1     0.584    R89C119C.F1 to    R89C117B.A1 n1452
+CTOF_DEL    ---     0.179    R89C117B.A1 to    R89C117B.F1 SLICE_12
+ROUTE         2     0.585    R89C117B.F1 to    R89C118B.B1 n1764
+CTOF_DEL    ---     0.179    R89C118B.B1 to    R89C118B.F1 SLICE_19
+ROUTE         1     0.620    R89C118B.F1 to   R90C119D.LSR n1739 (to ara_baglanti_c)
+                  --------
+                    4.927   (26.1% logic, 73.9% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C118D.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R90C119D.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.456ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i13  (to ara_baglanti_c +)
+
+   Delay:               5.420ns  (38.1% logic, 61.9% route), 12 logic levels.
+
+ Constraint Details:
+
+      5.420ns physical path delay SLICE_1 to SLICE_2 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.456ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOFCO_D  ---     0.055   R87C119C.FCI to   R87C119C.FCO SLICE_4
+ROUTE         1     0.000   R87C119C.FCO to   R87C119D.FCI n1530
+FCITOF0_DE  ---     0.327   R87C119D.FCI to    R87C119D.F0 SLICE_2
+ROUTE         1     0.000    R87C119D.F0 to   R87C119D.DI0 n97 (to ara_baglanti_c)
+                  --------
+                    5.420   (38.1% logic, 61.9% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119D.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 411.490ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i7  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i12  (to ara_baglanti_c +)
+
+   Delay:               5.386ns  (37.7% logic, 62.3% route), 11 logic levels.
+
+ Constraint Details:
+
+      5.386ns physical path delay SLICE_1 to SLICE_4 meets
+    416.667ns delay constraint less
+      0.000ns skew and
+     -0.209ns DIN_SET requirement (totaling 416.876ns) by 411.490ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.394   R87C119A.CLK to    R87C119A.Q0 SLICE_1 (from ara_baglanti_c)
+ROUTE         7     1.334    R87C119A.Q0 to    R89C120C.A1 compteur.count_7
+CTOF_DEL    ---     0.179    R89C120C.A1 to    R89C120C.F1 SLICE_38
+ROUTE         1     0.584    R89C120C.F1 to    R89C118C.A0 n1803
+CTOF_DEL    ---     0.179    R89C118C.A0 to    R89C118C.F0 SLICE_20
+ROUTE         2     0.295    R89C118C.F0 to    R89C118A.C1 n1715
+CTOF_DEL    ---     0.179    R89C118A.C1 to    R89C118A.F1 SLICE_23
+ROUTE         5     0.416    R89C118A.F1 to    R89C118A.B0 n1725
+CTOF_DEL    ---     0.179    R89C118A.B0 to    R89C118A.F0 SLICE_23
+ROUTE         1     0.725    R89C118A.F0 to    R87C118B.A0 n1949
+C0TOFCO_DE  ---     0.354    R87C118B.A0 to   R87C118B.FCO SLICE_8
+ROUTE         1     0.000   R87C118B.FCO to   R87C118C.FCI n1525
+FCITOFCO_D  ---     0.055   R87C118C.FCI to   R87C118C.FCO SLICE_10
+ROUTE         1     0.000   R87C118C.FCO to   R87C118D.FCI n1526
+FCITOFCO_D  ---     0.055   R87C118D.FCI to   R87C118D.FCO SLICE_0
+ROUTE         1     0.000   R87C118D.FCO to   R87C119A.FCI n1527
+FCITOFCO_D  ---     0.055   R87C119A.FCI to   R87C119A.FCO SLICE_1
+ROUTE         1     0.000   R87C119A.FCO to   R87C119B.FCI n1528
+FCITOFCO_D  ---     0.055   R87C119B.FCI to   R87C119B.FCO SLICE_3
+ROUTE         1     0.000   R87C119B.FCO to   R87C119C.FCI n1529
+FCITOF1_DE  ---     0.348   R87C119C.FCI to    R87C119C.F1 SLICE_4
+ROUTE         1     0.000    R87C119C.F1 to   R87C119C.DI1 n98 (to ara_baglanti_c)
+                  --------
+                    5.386   (37.7% logic, 62.3% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     2.207        OSC.OSC to   R87C119C.CLK ara_baglanti_c
+                  --------
+                    2.207   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  185.288MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ara_baglanti_c" 2.400000 |             |             |
+MHz ;                                   |    2.400 MHz|  185.288 MHz|  15  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ara_baglanti_c   Source: OSCInst0.OSC   Loads: 20
+   Covered under: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1359 paths, 1 nets, and 328 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond Version 3.5.0.102</big></U></B>
+Wed Aug 09 14:46:04 2017
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 8 -sphld m -o LED4_impl1.twr -gui LED4_impl1.ncd LED4_impl1.prf 
+Design file:     led4_impl1.ncd
+Preference file: led4_impl1.prf
+Device,speed:    LFE5UM-85F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "ara_baglanti_c" 2.400000 MHz (0 errors)</A></LI>            1359 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+            1359 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i6  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i6  (to ara_baglanti_c +)
+
+   Delay:               0.387ns  (61.0% logic, 39.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.387ns physical path delay SLICE_0 to SLICE_0 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C118D.CLK to    R87C118D.Q1 SLICE_0 (from ara_baglanti_c)
+ROUTE         6     0.151    R87C118D.Q1 to    R87C118D.A1 compteur.count_6
+CTOF_DEL    ---     0.075    R87C118D.A1 to    R87C118D.F1 SLICE_0
+ROUTE         1     0.000    R87C118D.F1 to   R87C118D.DI1 n104 (to ara_baglanti_c)
+                  --------
+                    0.387   (61.0% logic, 39.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118D.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118D.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i4  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i4  (to ara_baglanti_c +)
+
+   Delay:               0.387ns  (61.0% logic, 39.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.387ns physical path delay SLICE_10 to SLICE_10 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_10 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C118C.CLK to    R87C118C.Q1 SLICE_10 (from ara_baglanti_c)
+ROUTE         6     0.151    R87C118C.Q1 to    R87C118C.A1 compteur.count_4
+CTOF_DEL    ---     0.075    R87C118C.A1 to    R87C118C.F1 SLICE_10
+ROUTE         1     0.000    R87C118C.F1 to   R87C118C.DI1 n106 (to ara_baglanti_c)
+                  --------
+                    0.387   (61.0% logic, 39.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i14  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i14  (to ara_baglanti_c +)
+
+   Delay:               0.387ns  (61.0% logic, 39.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.387ns physical path delay SLICE_2 to SLICE_2 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C119D.CLK to    R87C119D.Q1 SLICE_2 (from ara_baglanti_c)
+ROUTE        10     0.151    R87C119D.Q1 to    R87C119D.A1 compteur.count_14
+CTOF_DEL    ---     0.075    R87C119D.A1 to    R87C119D.F1 SLICE_2
+ROUTE         1     0.000    R87C119D.F1 to   R87C119D.DI1 n96 (to ara_baglanti_c)
+                  --------
+                    0.387   (61.0% logic, 39.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119D.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119D.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i12  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i12  (to ara_baglanti_c +)
+
+   Delay:               0.387ns  (61.0% logic, 39.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.387ns physical path delay SLICE_4 to SLICE_4 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_4 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C119C.CLK to    R87C119C.Q1 SLICE_4 (from ara_baglanti_c)
+ROUTE         8     0.151    R87C119C.Q1 to    R87C119C.A1 compteur.count_12
+CTOF_DEL    ---     0.075    R87C119C.A1 to    R87C119C.F1 SLICE_4
+ROUTE         1     0.000    R87C119C.F1 to   R87C119C.DI1 n98 (to ara_baglanti_c)
+                  --------
+                    0.387   (61.0% logic, 39.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i20  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i20  (to ara_baglanti_c +)
+
+   Delay:               0.387ns  (61.0% logic, 39.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.387ns physical path delay SLICE_5 to SLICE_5 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_5 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C120C.CLK to    R87C120C.Q1 SLICE_5 (from ara_baglanti_c)
+ROUTE        16     0.151    R87C120C.Q1 to    R87C120C.A1 compteur.count_20
+CTOF_DEL    ---     0.075    R87C120C.A1 to    R87C120C.F1 SLICE_5
+ROUTE         1     0.000    R87C120C.F1 to   R87C120C.DI1 n90 (to ara_baglanti_c)
+                  --------
+                    0.387   (61.0% logic, 39.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120C.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.274ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i2  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i2  (to ara_baglanti_c +)
+
+   Delay:               0.392ns  (60.2% logic, 39.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.392ns physical path delay SLICE_8 to SLICE_8 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.274ns
+
+ Physical Path Details:
+
+      Data path SLICE_8 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C118B.CLK to    R87C118B.Q1 SLICE_8 (from ara_baglanti_c)
+ROUTE         1     0.156    R87C118B.Q1 to    R87C118B.B1 n19
+CTOF_DEL    ---     0.075    R87C118B.B1 to    R87C118B.F1 SLICE_8
+ROUTE         1     0.000    R87C118B.F1 to   R87C118B.DI1 n108 (to ara_baglanti_c)
+                  --------
+                    0.392   (60.2% logic, 39.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C118B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.275ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i8  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i8  (to ara_baglanti_c +)
+
+   Delay:               0.393ns  (60.1% logic, 39.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.393ns physical path delay SLICE_1 to SLICE_1 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.275ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C119A.CLK to    R87C119A.Q1 SLICE_1 (from ara_baglanti_c)
+ROUTE         5     0.157    R87C119A.Q1 to    R87C119A.B1 compteur.count_8
+CTOF_DEL    ---     0.075    R87C119A.B1 to    R87C119A.F1 SLICE_1
+ROUTE         1     0.000    R87C119A.F1 to   R87C119A.DI1 n102 (to ara_baglanti_c)
+                  --------
+                    0.393   (60.1% logic, 39.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119A.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.275ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i10  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i10  (to ara_baglanti_c +)
+
+   Delay:               0.393ns  (60.1% logic, 39.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.393ns physical path delay SLICE_3 to SLICE_3 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.275ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C119B.CLK to    R87C119B.Q1 SLICE_3 (from ara_baglanti_c)
+ROUTE        10     0.157    R87C119B.Q1 to    R87C119B.B1 compteur.count_10
+CTOF_DEL    ---     0.075    R87C119B.B1 to    R87C119B.F1 SLICE_3
+ROUTE         1     0.000    R87C119B.F1 to   R87C119B.DI1 n100 (to ara_baglanti_c)
+                  --------
+                    0.393   (60.1% logic, 39.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C119B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.275ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i18  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i18  (to ara_baglanti_c +)
+
+   Delay:               0.393ns  (60.1% logic, 39.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.393ns physical path delay SLICE_6 to SLICE_6 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.275ns
+
+ Physical Path Details:
+
+      Data path SLICE_6 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C120B.CLK to    R87C120B.Q1 SLICE_6 (from ara_baglanti_c)
+ROUTE        10     0.157    R87C120B.Q1 to    R87C120B.B1 compteur.count_18
+CTOF_DEL    ---     0.075    R87C120B.B1 to    R87C120B.F1 SLICE_6
+ROUTE         1     0.000    R87C120B.F1 to   R87C120B.DI1 n92 (to ara_baglanti_c)
+                  --------
+                    0.393   (60.1% logic, 39.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120B.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.275ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              compteur.count_141__i16  (from ara_baglanti_c +)
+   Destination:    FF         Data in        compteur.count_141__i16  (to ara_baglanti_c +)
+
+   Delay:               0.393ns  (60.1% logic, 39.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.393ns physical path delay SLICE_7 to SLICE_7 meets
+      0.118ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.118ns) by 0.275ns
+
+ Physical Path Details:
+
+      Data path SLICE_7 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161   R87C120A.CLK to    R87C120A.Q1 SLICE_7 (from ara_baglanti_c)
+ROUTE         8     0.157    R87C120A.Q1 to    R87C120A.B1 compteur.count_16
+CTOF_DEL    ---     0.075    R87C120A.B1 to    R87C120A.F1 SLICE_7
+ROUTE         1     0.000    R87C120A.F1 to   R87C120A.DI1 n94 (to ara_baglanti_c)
+                  --------
+                    0.393   (60.1% logic, 39.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120A.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        20     0.866        OSC.OSC to   R87C120A.CLK ara_baglanti_c
+                  --------
+                    0.866   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ara_baglanti_c" 2.400000 |             |             |
+MHz ;                                   |     0.000 ns|     0.269 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ara_baglanti_c   Source: OSCInst0.OSC   Loads: 20
+   Covered under: FREQUENCY NET "ara_baglanti_c" 2.400000 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1359 paths, 1 nets, and 328 connections (100.00% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

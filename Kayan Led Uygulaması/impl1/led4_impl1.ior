@@ -1,0 +1,56 @@
+Loading design for application iotiming from file led4_impl1.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-85F
+Package:     CABGA756
+Performance: 9
+Package Status:                     Preliminary    Version 1.38.
+Performance Hardware Data Status:   Preliminary    Version 42.1.
+Loading design for application iotiming from file led4_impl1.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5UM-85F
+Package:     CABGA756
+Performance: M
+Package Status:                     Preliminary    Version 1.38.
+Performance Hardware Data Status:   Preliminary    Version 42.1.
+// Design: led
+// Package: CABGA756
+// ncd File: led4_impl1.ncd
+// Version: Diamond Version 3.5.0.102
+// Written on Wed Aug 09 14:46:10 2017
+// M: Minimum Performance Grade
+// iotiming LED4_impl1.ncd LED4_impl1.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 9, 8):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port  Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+(no clock to output min/max data)
+
+
+// Internal_Clock to Output
+
+Port  Internal_Clock
+--------------------------------------------------------
+led   ara_baglanti_c
+led1  ara_baglanti_c
+led2  ara_baglanti_c
+led3  ara_baglanti_c
+led4  ara_baglanti_c
+led5  ara_baglanti_c
+led6  ara_baglanti_c
+led7  ara_baglanti_c

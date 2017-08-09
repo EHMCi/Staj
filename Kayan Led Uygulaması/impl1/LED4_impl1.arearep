@@ -1,0 +1,16 @@
+----------------------------------------------------------------------
+Report for cell led.TECH
+Register bits:  29 of 84735 (0.034%)
+I/O cells:      10
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        11          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3IX        21          100.0
+                            FD1S3JX         7          100.0
+                                GSR         1          100.0
+                               LUT4        68          100.0
+                                 OB         9          100.0
+                                OBZ         1          100.0
+                               OSCG         1          100.0
+                              TOTAL       120

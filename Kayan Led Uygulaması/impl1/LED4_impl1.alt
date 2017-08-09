@@ -1,0 +1,18 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Aug 09 14:46:21 2017 *
+NOTE DESIGN NAME: led *
+NOTE DEVICE NAME: LFE5UM-85F-8CABGA756 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS ara_baglanti : C19 : out *
+NOTE PINS clk_out : A5 : out *
+NOTE PINS led7 : AM29 : out *
+NOTE PINS led6 : AM28 : out *
+NOTE PINS led5 : AJ29 : out *
+NOTE PINS led4 : AG32 : out *
+NOTE PINS led3 : AH32 : out *
+NOTE PINS led2 : AK30 : out *
+NOTE PINS led1 : AK29 : out *
+NOTE PINS led : AG30 : out *
+NOTE CONFIGURATION MODE: JTAG *
+NOTE COMPRESSION: off *
